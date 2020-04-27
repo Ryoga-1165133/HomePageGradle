@@ -7,6 +7,7 @@ pipeline {
           sh './gradlew check'
         }
 
+        junit(testResults: 'build\\test-results\\test\\TEST-*.xml', healthScaleFactor: 1)
       }
     }
 
