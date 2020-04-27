@@ -3,7 +3,6 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        git(url: 'https://github.com/krtnstk/HomePageGradle.git', branch: 'develop')
         withGradle() {
           build(job: 'check', wait: true)
           checkstyle()
