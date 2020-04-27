@@ -4,7 +4,7 @@ pipeline {
     stage('test') {
       steps {
         withGradle() {
-          build(job: './gradlew check', wait: true)
+          sh './gradlew check'
         }
 
       }
@@ -13,7 +13,7 @@ pipeline {
     stage('build') {
       steps {
         withGradle() {
-          build(job: './gradlew bootWar', wait: true)
+          sh './gradlew build'
         }
 
       }
