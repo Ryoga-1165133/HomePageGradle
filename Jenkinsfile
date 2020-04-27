@@ -4,10 +4,7 @@ pipeline {
     stage('test') {
       steps {
         withGradle() {
-          build(job: 'check', wait: true)
-          checkstyle()
-          pmd()
-          junit(allowEmptyResults: true, testResults: '*')
+          build(job: './gradlew check', wait: true)
         }
 
       }
@@ -16,7 +13,7 @@ pipeline {
     stage('build') {
       steps {
         withGradle() {
-          build 'bootWar'
+          build(job: './gradlew bootWar', wait: true)
         }
 
       }
