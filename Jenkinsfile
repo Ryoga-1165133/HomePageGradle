@@ -5,6 +5,7 @@ pipeline {
       steps {
         withGradle() {
           sh '/var/jenkins_home/tools/hudson.plugins.gradle.GradleInstallation/gradle_6.3/bin/gradle check'
+          junit(testResults: 'build\\test-results\\test\\TEST-*.xml', healthScaleFactor: 1)
         }
 
       }
