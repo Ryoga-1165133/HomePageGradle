@@ -4,7 +4,7 @@ pipeline {
     stage('test') {
       steps {
         withGradle() {
-          sh './gradlew check'
+          sh '/var/jenkins_home/tools/hudson.plugins.gradle.GradleInstallation/gradle_6.3/bin/gradle check'
         }
 
       }
