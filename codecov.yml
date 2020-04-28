@@ -15,5 +15,3 @@ coverage:
         threshold: 1%
 
     changes: no
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
