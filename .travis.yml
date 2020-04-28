@@ -7,4 +7,4 @@ script:
   - ./gradlew check
   - ./gradlew codeCoverageReport
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -t 18c103fc-86c4-4e07-a735-97370d3fcdd7
