@@ -4,6 +4,7 @@ plugins {
 	id 'java'
 	id 'checkstyle'
 	id 'pmd'
+	id 'jacoco'
 }
 
 group = 'com.home'
@@ -48,6 +49,17 @@ pmd {
             "category/java/security.xml"
     ]
 }
+jacoco {
+    toolVersion = "0.8.5"
+}
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+}
 test {
 	useJUnitPlatform()
+	maxParallelForks = 4
 }
+build.dependsOn jacocoTestReport
