@@ -5,7 +5,6 @@ plugins {
 	id 'checkstyle'
 	id 'war'
 	id 'pmd'
-	id 'war'
 	id 'jacoco'
 }
 
