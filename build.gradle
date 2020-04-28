@@ -9,7 +9,7 @@ plugins {
 }
 
 group = 'com.home'
-version = '0.0.1-SNAPSHOT'
+//version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 configurations {
@@ -33,7 +33,7 @@ dependencies {
 }
 checkstyle {
 	toolVersion '8.31'
-	configFile = file('./google_checks.xml')
+	configFile = file('./src/google_checks.xml')
 	ignoreFailures = true
 }
 pmd {
