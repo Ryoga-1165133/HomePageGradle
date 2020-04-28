@@ -8,7 +8,7 @@ pipeline {
         }
 
         junit(testResults: 'build\\test-results\\test\\TEST-*.xml', healthScaleFactor: 1)
-        archiveArtifacts './build/reports/jacoco/test/html/main.html'
+        checkstyle()
       }
     }
 
