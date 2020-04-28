@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
 	@RequestMapping(value = { "/", "/index" })
 	public String index(Model model) {
-		model.addAttribute("message", "トップページ");
+		model.addAttribute("message", "トップページプルリク");
 		return "index";
 	}
 }
