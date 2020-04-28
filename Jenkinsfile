@@ -4,7 +4,7 @@ pipeline {
     stage('test') {
       steps {
         withGradle() {
-          sh './gradlew build'
+          sh './gradlew test'
         }
 
         junit(testResults: 'build\\test-results\\test\\TEST-*.xml', healthScaleFactor: 1)
@@ -18,6 +18,12 @@ pipeline {
           sh './gradlew bootWar'
         }
 
+      }
+    }
+
+    stage('deploy') {
+      steps {
+        echo 'deployOK'
       }
     }
 
