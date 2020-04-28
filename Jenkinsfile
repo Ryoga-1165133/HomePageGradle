@@ -15,7 +15,7 @@ pipeline {
     stage('build') {
       steps {
         withGradle() {
-          sh './gradlew bootWar'
+          sh '/var/jenkins_home/tools/hudson.plugins.gradle.GradleInstallation/gradle_6.3/bin/gradle bootWar'
         }
 
       }
