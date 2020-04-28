@@ -63,4 +63,4 @@ test {
 	useJUnitPlatform()
 	maxParallelForks = 4
 }
-build.dependsOn jacocoTestReport
+check.dependsOn jacocoTestReport
