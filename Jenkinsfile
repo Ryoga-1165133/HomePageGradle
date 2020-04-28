@@ -8,7 +8,7 @@ pipeline {
         }
 
         junit(testResults: 'build\\test-results\\test\\TEST-*.xml', healthScaleFactor: 1)
-        sh 'curl -s https://codecov.io/bash | bash'
+        archiveArtifacts './build/reports/jacoco/test/html/main.html'
       }
     }
 
