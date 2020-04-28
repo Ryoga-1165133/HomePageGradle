@@ -1,4 +1,6 @@
 codecov:
+  ci:
+   - http://153.127.20.106:4901/
   notify:
     require_ci_to_pass: yes
 
