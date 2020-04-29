@@ -20,5 +20,12 @@ pipeline {
       }
     }
 
+    stage('deploy') {
+      steps {
+        sh '''docker container run --name tomcat-test -p 80:8080 tomcat:latest
+docker cp ./build/libs/HomePageGradle.war tomcat-test:/usr/local/tomcat/webapps'''
+      }
+    }
+
   }
 }
