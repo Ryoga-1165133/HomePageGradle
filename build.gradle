@@ -55,23 +55,15 @@ test {
 	useJUnitPlatform()
 	maxParallelForks = 4
 }
-check.dependsOn jacocoTestReport
+test.dependsOn jacocoTestReport
 
 jacoco {
     toolVersion = "0.8.5"
 }
-def coverageExcludeFiles = [
-        // 内部クラスやLambda匿名クラスを排除
-        '**/*$*.class',
-        '**/*$lambda$*.class',
-]
 
 jacocoTestReport {
     reports {
         xml.enabled = true
         html.enabled = true
     }
-		executionData {
-			files('./build/jacoco/test.exec')
-		}
 }
